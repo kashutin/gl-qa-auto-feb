@@ -7,10 +7,10 @@ def get_response_from_web():
     rh = requests.head(url)
     rg = requests.get(url)
     ro = requests.options(url)
-    print(rh)
-    print('Request GET TEXT: \n' + rg.text.lstrip()[0:500])
-    print(rg)
-    print(ro)
-    return rg
+    print('REQUEST HEAD: ' + str(rh))
+    print('REQUEST GET: ' + str(rg) + '\n')
+    print('Request GET TEXT: \n' + rg.text.lstrip()[0:500] + '\n')
+    print('REQUEST OPTIONS: ' + str(ro))
+    return rg.text
 
 get_response_from_web()
