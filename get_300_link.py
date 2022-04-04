@@ -7,5 +7,6 @@ def recieve_url_from_shortener(url):
     print("STATUS CODE IN REQUEST HISTORY: " + str(r.history))
     fullurl = r.url
     return fullurl
-full_url = recieve_url_from_redirect(url)
+
+full_url = recieve_url_from_shortener(url)
 print('FULL URL FROM THE PROVIDED SHORTENER LINK: \n' + full_url)
