@@ -8,4 +8,4 @@ def recieve_url_from_shortener(url):
     fullurl = r.url
     return fullurl
 full_url = recieve_url_from_redirect(url)
-print('FULL URL FROM PROVIDED SHORTENER LINK: \n' + full_url)
+print('FULL URL FROM THE PROVIDED SHORTENER LINK: \n' + full_url)
