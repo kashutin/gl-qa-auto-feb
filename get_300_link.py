@@ -1,5 +1,5 @@
 import requests
-url = input('Введіть адресу(bit.ly, goo.gl, etc): ')
+url = input('Enter shortener URL(bit.ly, goo.gl, etc): ')
 
 def recieve_url_from_shortener(url):
     r = requests.get(url)
