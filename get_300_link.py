@@ -1,5 +1,5 @@
 import requests
-s_url = input('Enter shortener URL(bit.ly, goo.gl, etc): ')
+s_url = input('Enter shortener URL(Example: https://bit.ly/37W7bWy, https://goo.gl/vLfoaW): ').strip()
 
 def get_url_from_shortener(s_url):
     r = requests.get(s_url)
