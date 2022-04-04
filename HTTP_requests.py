@@ -9,7 +9,7 @@ def get_response_from_web():
     ro = requests.options(url)
     print('REQUEST HEAD: ' + str(rh))
     print('REQUEST GET: ' + str(rg) + '\n')
-    print('Request GET TEXT: \n' + rg.text.lstrip()[0:500] + '\n')
+    print('Request GET TEXT: \n' + rg.text.lstrip()[0:1000] + '\n')
     print('REQUEST OPTIONS: ' + str(ro))
     return rg.text
 
