@@ -1,1 +1,1 @@
-print("Hello GL")
+print("Hello GL QA Automation Training")
