@@ -3,8 +3,8 @@ s_url = input('Enter shortener URL(Example: https://bit.ly/37W7bWy, https://goo.
 
 def get_url_from_shortener(s_url):
     r = requests.get(s_url)
-    print("STATUS CODE OF SHORTENER: " +str(r.status_code))
-    print("STATUS CODE IN REQUEST HISTORY: " + str(r.history))
+    print("Status code: " +str(r.status_code))
+    print("Shortener status code: " + str(r.history))
     fullurl = r.url
     return fullurl
 
