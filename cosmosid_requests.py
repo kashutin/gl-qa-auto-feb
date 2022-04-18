@@ -21,5 +21,6 @@ def root_folder():
     r = requests.get(rf_url, headers={"x-token": a_token}, params=rf_params)
     logging.info(r.json())
 
-a_token = login()
-root_folder()
+if __name__ == "__main__":
+    a_token = login()
+    root_folder()
