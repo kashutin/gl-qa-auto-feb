@@ -20,6 +20,7 @@ def get_a_token():
 def get_root_folder():
     r = requests.get(rf_url, headers={"x-token": a_token}, params=rf_params)
     logging.info(r.json())
+    return r.json()
 
 if __name__ == "__main__":
     a_token = get_a_token()
