@@ -10,8 +10,9 @@ class ApiClient(BaseRequests):
     def login(self):
         """Method to execute login"""
         r = self.get(Urls.LOGIN, headers=Config.LOGIN_HEADER)
+        r.raise_for_status()
         self.token = r.json().get('token')
-
+        return self
 
 
     def get_folders(self):
