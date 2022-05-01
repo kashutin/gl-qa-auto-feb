@@ -49,7 +49,7 @@ class ApiClient(BaseRequests):
         )
         return r.json()
 
-    def get_analyses(self, folder_id, item_id):
+    def get_analysis(self, folder_id, item_id):
         """Method to get analyses requests"""
         r = self.get(
             Urls.FILES_ANALYSES.format(folder_id),
