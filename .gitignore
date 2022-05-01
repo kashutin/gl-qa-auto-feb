@@ -1,2 +1,4 @@
+.gitignore
 simple-app.py
 .idea
+.env
