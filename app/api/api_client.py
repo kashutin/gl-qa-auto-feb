@@ -6,7 +6,6 @@ from config.config import Config
 class ApiClient(BaseRequests):
     def __init__(self) -> None:
         super().__init__()
-        # self.token = None
 
     def login(self):
         """Method to execute login"""
@@ -25,11 +24,10 @@ class ApiClient(BaseRequests):
 
     def get_specific_folder(self, folder_id, item_id):
         """Method to get specific folder"""
-        r = self.get(Urls.FILES_V2,
+        r = self.get(
+            Urls.FILES_V2,
             headers={'x-token': self.token},
             params={**Config.ROOT_FOLDER_PARAMS, **{'folder_id': f'{folder_id}', '_': f'{item_id}'}}
-            # params={'breadcrumbs': '1', 'offset': '0', 'limit': '1000',
-            #          'folder_id': f'{folder_id}', '_': '1622700773180'},
         )
         return r.json()
 
