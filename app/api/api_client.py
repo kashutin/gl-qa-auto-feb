@@ -27,7 +27,7 @@ class ApiClient(BaseRequests):
         r = self.get(
             Urls.FILES_V2,
             headers={'x-token': self.token},
-            params={**Config.ROOT_FOLDER_PARAMS, **{'folder_id': f'{folder_id}', '_': f'{item_id}'}}
+            params={**Config.ROOT_FOLDER_PARAMS, **{'folder_id': folder_id, '_': item_id}}
         )
         return r.json()
 
@@ -36,7 +36,7 @@ class ApiClient(BaseRequests):
         r = self.get(
             Urls.FILES_COUNT_URL,
             headers={'x-token': self.token},
-            params={'folder_id': f'{folder_id}', '_': f'{item_id}'}
+            params={'folder_id': folder_id, '_': item_id}
         )
         return r.json()
 
@@ -45,7 +45,7 @@ class ApiClient(BaseRequests):
         r = self.get(
             Urls.FILES_RUN.format(folder_id),
             headers={"x-token": self.token},
-            params={'_': f'{item_id}'}
+            params={'_': item_id}
         )
         return r.json()
 
@@ -54,7 +54,7 @@ class ApiClient(BaseRequests):
         r = self.get(
             Urls.FILES_ANALYSES.format(folder_id),
             headers={'x-token': self.token},
-            params={'filter': 'total', '_': f'{item_id}'}
+            params={'filter': 'total', '_': item_id}
         )
         return r.json()
 
@@ -63,6 +63,6 @@ class ApiClient(BaseRequests):
         r = self.get(
             Urls.FILES_ARTIFACTS.format(folder_id),
             headers={'x-token': self.token},
-            params={'_': f'{item_id}'}
+            params={'_': item_id}
         )
         return r.json()
