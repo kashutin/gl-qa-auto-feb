@@ -1,0 +1,2 @@
+class Urls:
+    LOGIN = '/login'

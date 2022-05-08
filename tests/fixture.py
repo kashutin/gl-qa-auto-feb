@@ -2,7 +2,8 @@ import pytest
 from app.api.api_client import ApiClient
 
 @pytest.fixture
-def apiClient():
+def apiClient(scope='session'):
     apiClientX = ApiClient()
     apiClientX.login()
-    return apiClientX
+    yield apiClientX
+    logger.info("test completed")
