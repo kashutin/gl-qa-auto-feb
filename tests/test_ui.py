@@ -13,10 +13,6 @@ def ui_app():
 
 def test_login_failed(ui_app):
     """Test user can't login with wrong credentials"""
-    ui_app.login_page.login("svel@suma.com", "nevinosimo")
+    ui_app.login_page.login("notexisting@mail.com", "password123")
     assert ui_app.login_page.assert_login_failed()
 
-def test_login_failed2(ui_app):
-    """Test user can't login with wrong credentials"""
-    ui_app.login_page.login("svel@suma.com", "nevinosimo")
-    assert ui_app.login_page.assert_login_failed()
