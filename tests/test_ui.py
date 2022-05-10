@@ -9,7 +9,7 @@ def ui_app():
     # browser = request.config.getoption("browser")????????
     app = CosmosIDUI()
     yield app
-    app.driver.quit()
+    app.close_browser()
 
 def test_login_failed(ui_app):
     """Test user can't login with wrong credentials"""
